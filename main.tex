@@ -16,9 +16,8 @@
 \usepackage{tabularx}
 
 %% Пакет для вставки pdf файлов в ваш теховский документ
-\usepackage[final]{pdfpages} 
-
-%% Начало
+\usepackage{pdfpages}
+\usepackage{enumitem}
 \usepackage{physics}
 \usepackage{mathtools}
 \usepackage{xcolor}
@@ -26,7 +25,12 @@
 \usepackage{tabulary}
 \usepackage{multirow}
 
+\newcommand{\iu}{\mathrm{i}\mkern1mu}
+\newcommand{\eu}{\mathrm{e}\mkern1mu}
+\newcommand{\ve}[1]{\textbf{#1}}
 
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+\setlist[enumerate]{leftmargin=*,labelindent=\parindent}
 %% Указываем файл с библиографией.
 \addbibresource{bachelor-thesis.bib}
 
@@ -59,18 +63,15 @@
 %% Оглавление
 \tableofcontents
 
+
 \specialchapter{СПИСОК СОКРАЩЕНИЙ И УСЛОВНЫХ ОБОЗНАЧЕНИЙ\label{chapter:notation}}
-\setlength{\parindent}{0cm} %убираем по ГОСТУ абзацный отступ
-ППП --- поверхностный плазмон-поляритон;
 
-ПВ --- поверхностная волна;
+\noindent ППП --- поверхностный плазмон-поляритон
 
-ЭМ --- Электромагнитный;
+\noindent ПВ --- поверхностная волна
 
-НИР --- Научно-исследовательская работа.
+\noindent ЭМ --- Электромагнитный
 
-\setlength{\parindent}{1.25cm} %возвращаем абзацный отступ для остального доумента
-%% Макрос для введения. Совместим со старым стилевиком.
 
 \include{abstrait}
 
